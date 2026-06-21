@@ -62,7 +62,7 @@ The compilation tool that I'm using is a PowerShell script, simply because I'm j
     5. Save it. (It will try and run, just go a random directory beforehand like C:\ so the PowerShell script halts before doing anything)
 
 Now it's functional. Make sure that your project structure has proj_folder (pick whatever actual name you like), src under, and a java file somewhere inside src. To run:
-- Navigate to the java file, like via the Explorer plugin, or just open it with File Explorer in Windows.
+- Open the java file, like via the Explorer plugin, or just open it with File Explorer in Windows.
   - For convenience you can set .java files to always open with Notepad++, from File Explorer.
 - In Notepad++, navigate to Plugins > NppExec > Execute...
 - Choose ".java" from the dropdown (or whatever you called it) and click OK
