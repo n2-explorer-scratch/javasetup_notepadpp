@@ -49,7 +49,7 @@ The compilation tool that I'm using is a PowerShell script, simply because I'm j
 
 ## Configuring the plugins/setup
 ### NppExec
-1. Download the PowerShell script, and replace the placeholder text at the top, in quotes, to the Java JDK absolute directory (right above \bin)
+1. Download the PowerShell script in this repository, and replace the placeholder text at the top, in quotes, to the Java JDK absolute directory (right above \bin)
 2. In Notepad++:
     1. Go to Plugins > NppExec > Execute...
     2. Paste the following in there (and replace the filler text _in angle brackets_):
