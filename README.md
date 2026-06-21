@@ -9,7 +9,7 @@ I suggest using https://virustotal.com to check the installer/portable executabl
 ## Install Java JDK
 I just went here: https://www.oracle.com/java/technologies/downloads/
 
-And chose the latest JDK (26) for Windows, and got the x64 Compressed Archive, and then extracted it in my user home folder. You'll need the absolute path later
+And chose the latest JDK (26, but I don't have a specific suggestion) for Windows, and got the x64 Compressed Archive, and then extracted it in my user home folder. You'll need the absolute path later
 
 TODO: add screenshot
 
