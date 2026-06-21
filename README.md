@@ -73,7 +73,7 @@ Details: This will generate a hashes.txt with the relative paths of all java fil
 
 # Making the setup more useful (ideas)
 ## NppExec
-- Make a "Run" custom script in NppExec, as follows:
+- Make a "Run" custom script in NppExec, as follows: [^1]
   ```
   npp_exec $(EXT_PART)
   ```
@@ -98,3 +98,5 @@ Details: This will generate a hashes.txt with the relative paths of all java fil
 On my version each panel in the window can be moved around, so I could put the console at the top or Explorer on the right for example.
 
 \*(on a side note, I prefer to use Run > Run..., the Notepad++ default outside NppExec, for running Python, it works better with the `pygame` module)
+
+[^1]: https://d0vgan.github.io/nppexec/NppExec_Manual/NppExec_Guide.html
