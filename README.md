@@ -29,6 +29,8 @@ TODO: add screenshot
 
 There are a bunch of other useful plugins. I recommend "Markdown Panel" (https://github.com/mohzy83/NppMarkdownPanel).
 
+There is also a default feature Folder As Workspace, it's helpful for a summary of the project tree (drag project folder in) but doesn't let you modify/delete/add files/folders. You'll need the Explorer plugin for that.
+
 ## Specification of what I'm doing
 The project tree convention being used here is this:
 ```
