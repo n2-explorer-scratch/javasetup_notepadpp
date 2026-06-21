@@ -35,6 +35,8 @@ The project tree convention being used here is this:
 proj_folder
 |_ src   // contains the source files. only directory needed initially
 |___ packagename
+|______subdirectory
+|__________somethingdeeper.java
 |______ something.java
 |___ Main.java
 |_ bin   // contains binaries. automatically generated
