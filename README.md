@@ -60,7 +60,36 @@ The compilation tool that I'm using is a PowerShell script, simply because I'm j
     5. Save it. (It will try and run, just go a random directory beforehand like C:\ so the PowerShell script halts before doing anything)
 
 Now it's functional. Make sure that your project structure has proj_folder (pick whatever actual name you like), src under, and a java file somewhere inside src. To run:
-- Navigate to the java file, like via the Explorer plugin, or just open it with 
+- Navigate to the java file, like via the Explorer plugin, or just open it with File Explorer in Windows.
+  - For convenience you can set .java files to always open with Notepad++, from File Explorer.
+- In Notepad++, navigate to Plugins > NppExec > Execute...
+- Choose ".java" from the dropdown (or whatever you called it) and click OK
 
-, but some tips that will make the plugin more helpful:
-- 
+Details: This will generate a hashes.txt with the relative paths of all java files in the src folder, and their SHA256 hashes. If a java file is changed between script runs, the hashes.txt file is updated and the file path is appended to changed.txt for that run. The `javac` command is executed with the file list changed.txt, before `java -cp bin <current class path>` is executed, depending on the currently open file in the editor.
+
+`<current class path>` would be package.Main if you are running a src\package\Main.java open in the editor.
+
+# Making the setup more useful (ideas)
+## NppExec
+- Make a "Run" custom script in NppExec, as follows:
+  ```
+  npp_exec $(EXT_PART)
+  ```
+  So, for example, if you made two custom scripts, ".java" and ".py"*, each would run for respective files.
+- You can assign the "Run", or ".java" commands to a shortcut.
+  - Go to Plugins > NppExec > Advanced Options...
+  - Choose the Run or .java scripts from the Associated Script dropdown
+  - Make a desired Item name, it can be the same
+  - Press Add/Modify
+  - Then, in Notepad++, go to Run > Modify Shortcut/Delete Command...
+  - choose Plugin commands from the top,
+  - filter for your custom script, and assign a shortcut. It will tell you if there is a conflict, F9 didn't conflict and was convenient for me.
+- Error highlighting can be done via Plugins > NppExec > Console Output Filters...  
+  Use `%FILE%:%LINE%: *error*` in the top box (altered from the default gcc suggestion at the bottom), press the checkmark to the left, and the U checkmark. (to enable and underline respectively)
+  - `#D54309` (rgb hex code) looks nice in my opinion if you want a custom color
+  - (the PowerShell script uses relative paths although that can be changed relatively easily)
+- Console font/size can be changed; go to Plugins > NppExec > Change Console Font...
+  - Consolas, Normal, size 10, worked for my screen.
+- You can change default console color, go to Plugins > NppExec > Advanced Options...
+
+\*(on a side note, I prefer to use Run > Run..., the Notepad++ default outside NppExec, for running Python, it works better with the `pygame` module)
