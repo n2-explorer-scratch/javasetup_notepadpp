@@ -6,7 +6,7 @@ I'm using Windows, debug info says "Build time : Jun 23 2020 - 23:59:56". I'm no
 
 I suggest using https://virustotal.com to check the installer/portable executable, as a general convention just in case something is exploited by a third-party. I can't guarantee that it won't return either a false positive or false negative.
 
-## Install Java JDK
+## Get Java JDK
 I just went here: https://www.oracle.com/java/technologies/downloads/
 
 And chose the latest JDK (26, but I don't have a specific suggestion) for Windows, and got the x64 Compressed Archive, and then extracted it in my user home folder. You'll need the absolute path later
