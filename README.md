@@ -94,4 +94,7 @@ Details: This will generate a hashes.txt with the relative paths of all java fil
   - Consolas, Normal, size 10, worked for my screen.
 - You can change default console color, go to Plugins > NppExec > Advanced Options...
 
+## other stuff
+On my version each panel in the window can be moved around, so I could put the console at the top or Explorer on the right for example.
+
 \*(on a side note, I prefer to use Run > Run..., the Notepad++ default outside NppExec, for running Python, it works better with the `pygame` module)
