@@ -10,6 +10,7 @@ proj_folder
 |______ something.java
 |___ Main.java
 |_ bin   // contains binaries. automatically generated
+|_ libs // contains libraries, such as .jar format.
 |_ changed.txt  // used by the compilation script at runtime, no need to edit
 |_ hashes.txt   // used by the compilation script to compile only changed files
 ```
