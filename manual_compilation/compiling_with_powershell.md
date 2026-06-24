@@ -17,7 +17,7 @@ I made this when I was just learning about Java and wanted to see how far it wou
 
 ## Configuring the plugins/setup
 ### NppExec
-1. Download the PowerShell script [run_java.ps1](run_java.ps1), and replace the placeholder text at the top, in quotes, to the Java JDK absolute directory (right above \bin)
+1. Download the PowerShell script [run_java_manually.ps1](run_java_manually.ps1), and replace the placeholder text at the top, in quotes, to the Java JDK absolute directory (right above \bin)
 2. In Notepad++:
     1. Go to Plugins > NppExec > Execute...
     2. Paste the following in there (and replace the filler text _in angle brackets_):
