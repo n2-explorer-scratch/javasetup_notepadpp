@@ -13,8 +13,14 @@ while (-not (test-path ".\src")) {
 	cd ..
 }
 
+# incremental compilation
 if (-not (test-path "hashes.txt" -pathtype leaf)) {
 	echo "" > hashes.txt
+}
+
+# library reference
+if (-not (test-path "libs" -pathtype container)) {
+	mkdir libs
 }
 
 $hashes = get-content hashes.txt
@@ -52,17 +58,17 @@ for ($i = 0; $i -lt $hashes.Count; $i++) {
 set-content hashes.txt -value $hashes -encoding ascii
 set-content changed.txt -value $changed -encoding ascii
 
-echo "$JAVA_PATH\bin\javac @changed.txt -d bin"
+echo "$JAVA_PATH\bin\javac @changed.txt -d bin -cp .;libs\*"
 $javacprocess = start-process -nonewwindow `
     -filepath "$JAVA_PATH\bin\javac.exe" `
-    -argumentlist "@changed.txt", "-d", "bin" `
+    -argumentlist "@changed.txt", "-d", "bin", "-cp", ".;libs\*" `
     -wait `
 	-passthru
 
 if ($javacprocess.exitcode -eq 1) {
 	echo ""
 	echo "RUNNING 1 OR MORE PREVIOUS CLASS VERSIONS! `(see compile error`)"
-  
+
     $bad = $changed
     $newhashes = @()
 
@@ -73,13 +79,14 @@ if ($javacprocess.exitcode -eq 1) {
         }
     }
 
+    # update hashes.txt
     set-content hashes.txt -value $newhashes -encoding ascii
 }
 
 $programclass = $programfile -replace '^.*?src[\\/]', '' -replace '\\', '.' -replace '/', '.' -replace '\.java$', ''
 
-echo "$JAVA_PATH\bin\java -cp bin $programclass"
+echo "$JAVA_PATH\bin\java -cp bin;libs\* $programclass"
 start-process -nonewwindow `
     -filepath "$JAVA_PATH\bin\java.exe" `
-    -argumentlist "-cp", "bin", "$programclass" `
+    -argumentlist "-cp", "bin;libs\*", "$programclass" `
     -wait
