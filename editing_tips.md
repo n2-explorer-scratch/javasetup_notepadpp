@@ -33,7 +33,7 @@
 For automatic keyword replacement (e.g. "sout" for "System.out.println") you can install the QuickText plugin from Plugins Admin.[^2] (the plugin's GitHub repo has some incongruous information with the version i'm using, but here it is: https://github.com/vinsworldcom/nppQuickText)
   * Then go to Plugins > QuickText > Options...
   * Make sure language in top left says "Java"
-  * Add a new Tag, "sout", and fill the below box with "System.out.println", for example.
+  * Add a new Tag, "sout", and fill the below box with "System.out.println($);", for example. (`$` representing where the cursor should jump to)
   * Press Add/Modify
   * You'll need to make a shortcut for replacement, this can be the same as your autocompletion shortcut (like <kbd>Tab</kbd>):
     * Go to Macro > Modify Shortcut/Delete Macro...
