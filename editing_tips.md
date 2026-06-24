@@ -35,12 +35,12 @@ For automatic keyword replacement (e.g. "sout" for "System.out.println") you can
   * Make sure language in top left says "Java"
   * Add a new Tag, "sout", and fill the below box with "System.out.println($);", for example. (`$` representing where the cursor should jump to)
   * Press Add/Modify
-  * You'll need to make a shortcut for replacement, this can be the same as your autocompletion shortcut (like <kbd>Tab</kbd>):
+  * You'll need to make a shortcut for replacement, this can be the same as your autocompletion shortcut (like <kbd>Alt</kbd>+<kbd>Enter</kbd>):
     * Go to Macro > Modify Shortcut/Delete Macro...
     * Go to Plugin Commands
     * Filter for "Replace Tag"
-    * Assign a shortcut, I recommend <kbd>Tab</kbd>, don't worry about the conflict message
-    * After pressing Ok, you can try out typing "sout" in the editor and it will replace after <kbd>Tab</kbd>
+    * Assign a shortcut, I recommend <kbd>Alt</kbd>+<kbd>Enter</kbd>. <kbd>Tab</kbd> conflicts with indentation
+    * After pressing Ok, you can try out typing "sout" in the editor and it will replace after <kbd>Alt</kbd>+<kbd>Enter</kbd>.
 
 [^2]: I have tried editing the java.xml AutoComplete settings document, but not found a relevant provision for replacement. You could try finding it at https://npp-user-manual.org/docs/auto-completion/.
 
