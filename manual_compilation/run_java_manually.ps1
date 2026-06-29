@@ -58,10 +58,10 @@ for ($i = 0; $i -lt $hashes.Count; $i++) {
 set-content hashes.txt -value $hashes -encoding ascii
 set-content changed.txt -value $changed -encoding ascii
 
-echo "$JAVA_PATH\bin\javac @changed.txt -d bin -cp .;libs\*"
+echo "$JAVA_PATH\bin\javac @changed.txt -d bin -cp bin;libs\*"
 $javacprocess = start-process -nonewwindow `
     -filepath "$JAVA_PATH\bin\javac.exe" `
-    -argumentlist "@changed.txt", "-d", "bin", "-cp", ".;libs\*" `
+    -argumentlist "@changed.txt", "-d", "bin", "-cp", "bin;libs\*" `
     -wait `
 	-passthru
 
